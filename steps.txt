@@ -25,3 +25,7 @@ FULL PROJECT STEPS
 -Album model & migration
     -"php artisan make:model Album --migration"
     -implement Album migration
+    -"php artisan migrate"
+
+-ImageManipulation model & migration
+    -"php artisan make:model ImageManipulation -m"
