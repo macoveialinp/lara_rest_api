@@ -21,3 +21,5 @@ FULL PROJECT STEPS
         DB_PASSWORD=password
 
 -run initial db migration: "php artisan migrate"
+
+-"php artisan make:model Album --migration"
