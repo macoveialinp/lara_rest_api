@@ -1,0 +1,23 @@
+FULL PROJECT STEPS
+-------------------
+(Project created under Ubuntu 24.04 using Laravel 11, PHP 8.4, MySQL 8.0)
+
+-create new project: "composer create-project laravel/laravel lara_rest_api"
+
+-make sure InnoDB is the default storage engine by running "show engines;" in mysql CLI
+    -(in MySQL 8.0, it is. but if in your case it's not, you can set it "by setting the default-storage-engine option in the 
+    my.cnf configuration file": https://dev.mysql.com/doc/refman/8.0/en/storage-engine-setting.html )
+
+-create database. for this i use mysql CLI.
+    -"CREATE DATABASE lara_rest_api CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;"
+
+-configure database connection
+    -in .env and .env.example (and in TablePlus), i added:
+        DB_CONNECTION=mysql
+        DB_HOST=localhost
+        DB_PORT=3306
+        DB_DATABASE=lara_rest_api
+        DB_USERNAME=root
+        DB_PASSWORD=password
+
+-run initial db migration: "php artisan migrate"
