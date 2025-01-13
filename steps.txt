@@ -31,3 +31,6 @@ FULL PROJECT STEPS
     -"php artisan make:model ImageManipulation -m"
     -implement ImageManipulation migration
     -"php artisan migrate"
+
+-Album CRUD
+    -"php artisan make:controller AlbumController --model=Album --api --requests"
