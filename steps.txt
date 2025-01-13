@@ -22,4 +22,6 @@ FULL PROJECT STEPS
 
 -run initial db migration: "php artisan migrate"
 
--"php artisan make:model Album --migration"
+-Album model & migration
+    -"php artisan make:model Album --migration"
+    -implement Album migration
