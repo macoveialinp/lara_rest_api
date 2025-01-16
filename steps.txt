@@ -35,7 +35,7 @@ FULL PROJECT STEPS
 -Album CRUD
     -"php artisan make:controller AlbumController --model=Album --api --requests"
     -install API support: "php artisan install:api" (https://laravel.com/docs/11.x/releases#opt-in-routing)
-        -this includes Laravel Sanctum which i'll use later onDelete
+        -this includes Laravel Sanctum which i'll use later on
         -"API scaffolding installed. Please add the [Laravel\Sanctum\HasApiTokens] trait to your User model" - did that
     -implement StoreAlbumRequest and UpdateAlbumRequest, add apiResource route in routes/api.php for album,
     add $fillable to Album model for mass assignment, implement AlbumController methods, add postman_collection.json
