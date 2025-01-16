@@ -13,7 +13,7 @@ class AlbumController extends Controller
      */
     public function index()
     {
-        //
+        return Album::all();
     }
 
     /**
@@ -21,7 +21,10 @@ class AlbumController extends Controller
      */
     public function store(StoreAlbumRequest $request)
     {
-        //
+        // $album = Album::create($request->all());
+        $album = Album::create($request->validated());
+
+        return $album;
     }
 
     /**
@@ -29,7 +32,7 @@ class AlbumController extends Controller
      */
     public function show(Album $album)
     {
-        //
+        return $album;
     }
 
     /**
@@ -37,7 +40,9 @@ class AlbumController extends Controller
      */
     public function update(UpdateAlbumRequest $request, Album $album)
     {
-        //
+        $album->update($request->validated());
+
+        return $album;
     }
 
     /**
@@ -45,6 +50,8 @@ class AlbumController extends Controller
      */
     public function destroy(Album $album)
     {
-        //
+        $album->delete();
+
+        return response('', 204);
     }
 }
