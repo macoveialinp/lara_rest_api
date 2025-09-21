@@ -1,0 +1,20 @@
+PROJECT STEPS
+-------------
+(project created under Ubuntu using PHP 8.3, MySQL 8.0, Laravel 10.49)
+
+-create new project: "composer create-project "laravel/laravel:^10.0" lara_rest_api"
+
+-create database
+    -open mysql cli: "mysql -u root -p"
+    -1st make sure InnoDB is the default storage engine: "show engines;"
+    -create db: "CREATE DATABASE lara_rest_api CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;"
+
+-set db connection details in .env (and .env.example - not recommended, i only do it to use it for the project setup)
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=lara_rest_api
+    DB_USERNAME=root
+    DB_PASSWORD=password
+
+-run initial migration: "php artisan migrate"
