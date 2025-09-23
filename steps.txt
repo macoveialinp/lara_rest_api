@@ -37,4 +37,5 @@ PROJECT STEPS
 
 -API versioning
     -added 'v1' prefix for my API routes
-    
+    -API resources
+        -"php artisan make:resource V1/AlbumResource"
