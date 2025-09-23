@@ -30,3 +30,4 @@ PROJECT STEPS
 -Album CRUD
     -"php artisan make:controller AlbumController --api --model=Album --requests"
     -added apiResource route
+    -add $fillable to Album model to allow mass assignment
