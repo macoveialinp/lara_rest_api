@@ -34,3 +34,7 @@ PROJECT STEPS
     -implement AlbumController actions + the form request classes for validation
 
 -added postman_collection.json
+
+-API versioning
+    -added 'v1' prefix for my API routes
+    
