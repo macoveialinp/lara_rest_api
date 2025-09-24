@@ -35,8 +35,11 @@ PROJECT STEPS
 
 -added postman_collection.json
 
--API versioning & resources
+-Album API versioning & resources
     -added 'v1' prefix for my API routes
     -"php artisan make:resource V1/AlbumResource"
     -created V1 folder in Controllers, moved Albumcontroller inside it & refactored it and routes/api.php
     -updated AlbumResource and used it in AlbumController
+
+-ImageManipulation CRUD + API versioning & resources
+    -"php artisan make:controller V1/ImageManipulationController --api --model=ImageManipulation --requests"
