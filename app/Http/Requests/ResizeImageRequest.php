@@ -11,7 +11,7 @@ class ResizeImageRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -21,8 +21,23 @@ class ResizeImageRequest extends FormRequest
      */
     public function rules(): array
     {
-        return [
-            //
+        $regex = 'regex:/^d+(\.\d+)?%?$/'; // e.g. 50, 50%, 50.123, 50.123%
+
+        $rules = [
+            'image' => 'required',
+            'w' => ['required', $regex],
+            'h' => $regex,
+            'album_id' => 'exists:App/Models/Album,id'
         ];
+
+        // https://laravel.com/docs/10.x/requests#retrieving-input
+        // you access the request object directly through $this, NOT through $this->request
+        // dd($this->all(), $this->input(), $this->request, $this->request->all());
+
+        // dd($this->post('image'), $this->input('image'), $this->all()['image'], $this->image); // they're all equivalent($this->image is some Laravel magic)
+        $image = $this->post('image');
+
+
+        return $rules;
     }
 }

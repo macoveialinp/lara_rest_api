@@ -46,3 +46,5 @@ PROJECT STEPS
     -"php artisan make:resource V1/ImageManipulationResource"
     -made some updates to ImageManipulationController and the form request classes
     -added routes in routes/api.php
+    -implement ImageManipulationController's resize()
+        -implement app/Http/Requests/ResizeImageRequest.php

@@ -4,7 +4,6 @@ namespace App\Http\Controllers\V1;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ResizeImageRequest;
-use App\Http\Requests\UpdateImageManipulationRequest;
 use App\Models\Album;
 use App\Models\ImageManipulation;
 
@@ -31,13 +30,13 @@ class ImageManipulationController extends Controller
      */
     public function resize(ResizeImageRequest $request)
     {
-        //
+        
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(ImageManipulation $imageManipulation)
+    public function show(ImageManipulation $image)
     {
         //
     }
@@ -45,7 +44,7 @@ class ImageManipulationController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(ImageManipulation $imageManipulation)
+    public function destroy(ImageManipulation $image)
     {
         //
     }
