@@ -45,3 +45,4 @@ PROJECT STEPS
     -"php artisan make:controller V1/ImageManipulationController --api --model=ImageManipulation --requests"
     -"php artisan make:resource V1/ImageManipulationResource"
     -made some updates to ImageManipulationController and the form request classes
+    -added routes in routes/api.php

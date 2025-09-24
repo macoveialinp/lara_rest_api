@@ -5,6 +5,7 @@ namespace App\Http\Controllers\V1;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ResizeImageRequest;
 use App\Http\Requests\UpdateImageManipulationRequest;
+use App\Models\Album;
 use App\Models\ImageManipulation;
 
 class ImageManipulationController extends Controller
@@ -15,6 +16,14 @@ class ImageManipulationController extends Controller
     public function index()
     {
         //
+    }
+    
+    /**
+     * Display images by album
+     */
+    public function byAlbum(Album $album)
+    {
+        
     }
 
     /**
